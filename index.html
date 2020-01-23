@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>My lovely page</title>
+  <script src="./Tone_r13.min.js"></script>
+  <script src="./pixel_manipulation.js"></script>
+  <!-- <script src="./script.js"></script> -->
+  <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
+</head>
+<body>
+  <p>
+    Hello there!
+  </p>
+
+  <input id="flip-btn" type="button" value="flip camera">
+  <input id="play-btn" type="button" value="play" onclick="my_start()">
+  <br/>
+
+  <video id="camera-stream" width="400" height="300" controls>
+  <!-- <video id="camera-stream" width="1280" height="720" controls> -->
+    Your browser does not support the video tag.
+  </video>
+
+  <canvas id="a-canvas" width="400" height="300"></canvas>
+
+  <script src="./camera_stream.js"></script>
+
+  <!-- <video width="1280" height="720" controls>
+    Your browser does not support the video tag.
+  </video> -->
+  <!-- <script src="./script_from_mozilla.js"></script> -->
+
+
+</body>
+</html>
