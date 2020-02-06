@@ -70,9 +70,9 @@ let instrDef = {
       return new Tone.Players({
         "400000": baseURL + "edm_arp_samples/" + "072_glassy_arpeg.mp3",
         "400001": baseURL + "edm_arp_samples/" + "074_e_bottles.mp3",
-        "400002": baseURL + "edm_arp_samples/" + "077_eb_alarm",
-        "400003": baseURL + "edm_arp_samples/" + "082_gfs_droplets.gm",
-        "400004": baseURL + "edm_arp_samples/" + "073_electric_arpeg"
+        "400002": baseURL + "edm_arp_samples/" + "077_eb_alarm.mp3",
+        "400003": baseURL + "edm_arp_samples/" + "082_gfs_droplets.gm.mp3",
+        "400004": baseURL + "edm_arp_samples/" + "073_electric_arpeg.mp3"
       }, function(){
         console.log("arp loaded!")
         load_check()
