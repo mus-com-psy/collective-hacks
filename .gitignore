@@ -5,12 +5,28 @@ node_modules/
 .DS_Store
 
 # Audio
-*.mp3
 *.wav
+*.mp3
+*.aup
+*.au
 *.ogg
+
+# Symbolic music
+*.mid
+*.midi
+*.musicxml
+*.krn
 
 # Images
 *.png
+*.jpg
+*.jpeg
+*.gif
+
+# General documents
+*.pdf
+*.pptx
+*.csv
 
 # Data files maybe?
 # *.json
