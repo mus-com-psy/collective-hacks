@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>My lovely page</title>
+  <script src="./../lib/Tone_r13.min.js"></script>
+  <script src="./../lib/maia-util_r0.2.12.js"></script>
+  <script src="./pixel_manipulation.js"></script>
+  <!-- <script src="./script.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <section id="container" class="container">
+    <p>
+      Hello there!
+    </p>
+
+    <input id="flip-btn" type="button" value="flip camera">
+    <input id="play-btn" type="button" value="snap" onclick="my_start()">
+    <input id="play-btn" type="button" value="play" onclick="sonify_picture(imgDat)">
+    <br/>
+    <canvas id="a-canvas" width="400" height="300"></canvas>
+
+    <div id="interactive" class="viewport"></div>
+
+    <!-- <video id="camera-stream" width="400" height="300" controls>
+      Your browser does not support the video tag.
+    </video> -->
+
+
+
+
+  </section>
+  <script src="./camera_stream.js"></script>
+
+</body>
+</html>
