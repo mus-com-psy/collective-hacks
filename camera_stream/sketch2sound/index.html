@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Sketch to sound</title>
+  <script src="./../lib/Tone_r13.min.js"></script>
+  <script src="./../lib/maia-util_r0.2.12.js"></script>
+  <script src="./pixel_manipulation.js"></script>
+  <!-- <script src="./script.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <section id="container" class="container">
+    <h3>Music, Science and Technology Research Centre at YorNight 2020</h3>
+    <p>
+      This interface can be used to take a photo and turn darker patches into
+      sound. Sounds vary in frequency (pitch) according to vertical position in
+      the photo and over time according to horizontal position. This interface
+      is an example of <b>sonification</b> &ndash; the general process of
+      turning data into sound.
+    </p>
+    <!-- <p>
+      You can select from a number of oscillators (wave shapes), such as
+      triangle, sawtooth, etc., which alter the quality of the sound.
+    </p> -->
+    <p>
+      If you'd like to learn more about music and coding for the web, visit
+      <a href="https://tomcollinsresearch.net/index.html#demos" target="_blank">this page</a>.
+    </p>
+    <p>
+      (This interface is a proof-of-concept hack. Apologies for any bugs,
+      lack of style,...)
+    </p>
+
+
+    <div id="interactive" class="viewport"></div>
+    <br/>
+    <img border="0" src="./img/photo-camera.png" width="100" height="100" onclick="snap()">
+    <img border="0" src="./img/play-button.png" width="100" height="100" onclick="sonify_picture(imgDat)">
+    <img border="0" src="./img/stop-button.png" width="100" height="100" onclick="my_stop()">
+    &nbsp;
+    <img id="flip-btn" border="0" src="./img/flip-camera.png" width="100" height="100">
+    <!-- <input id="flip-btn" type="button" value=""> -->
+    <!-- <input id="play-btn" type="button" value="snap" onclick="snap()">
+    <input id="play-btn" type="button" value="play" onclick="sonify_picture(imgDat)">
+    <input id="play-btn" type="button" value="stop" onclick="my_stop()"> -->
+    <br/><br/>
+    <canvas id="a-canvas" width="400" height="300"></canvas>
+
+
+    <h3>Credits</h3>
+    <p>
+      The code in this example was written by Tom Collins. Reuse of
+      the code is welcomed, and governed by the
+      <a href="../../LICENSE">GNU General Public License Version 3</a>
+      or later. It uses code or data from the following resources.
+    </p>
+    <ul>
+      <li>
+        The idea for the poster was inspired by JeongHo Park's
+        <a href="https://instagram.com/p/B7t53sjIg1W/" target="_blank">turning sketches into sound</a>.
+      </li>
+      <!-- <li>
+        Icons on the poster are from <a href="https://www.freepik.com/" target="_blank">Freepik</a>.
+      </li>
+      <li>
+        Vocal samples from
+        <a href="https://freesound.org/people/ymaaela/" target="_blank">ymaaela</a>
+        on
+        <a href="https://freesound.org/" target="_blank">Freesound</a>
+      </li>
+      <li>
+        All other samples prepared by Tom Collins.
+      </li> -->
+      <li>
+        Icons on the poster are from <a href="https://www.freepik.com/" target="_blank">Freepik</a>.
+      </li>
+      <li>
+        <a href="https://jquery.com/" target="_blank">jQuery</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" target="_blank">Video capture</a> and
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas" target="_blank">pixel manipulation</a>
+        are from Mozilla documentation.
+      </li>
+      <li>
+        The camera flip is based on
+        <a href="https://h3manth.com/new/blog/2018/switch-cameras-getusermedia/" target="_blank">this code</a>
+        by Hemanth.HM.
+      </li>
+      <li>
+        Audio engine uses
+        <a href="https://github.com/Tonejs/Tone.js" target="_blank">Tone.js</a> by Yotam Mann.
+      </li>
+    </ul>
+
+
+
+
+  </section>
+  <script src="./camera_stream.js"></script>
+
+</body>
+</html>

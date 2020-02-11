@@ -23,6 +23,12 @@ function capture() {
     .then(function(_stream) {
       stream = _stream;
       let $viewport = document.querySelector("#interactive.viewport")
+      // Remove any existing children (from previous camera flips).
+      var fc = $viewport.firstChild;
+      while (fc){
+        $viewport.removeChild(fc);
+        fc = $viewport.firstChild;
+      }
       let video = document.createElement("video")
       $viewport.appendChild(video)
       video.setAttribute('id', 'camera-stream')

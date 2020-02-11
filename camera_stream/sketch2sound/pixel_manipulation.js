@@ -1,11 +1,27 @@
 let imgDat
+const nosRow = 300
+const nosCol = 400
+const nosPart = 10
+// sine, square, triangle, or sawtooth
+let synth = new Tone.PolySynth(nosPart, Tone.Synth, {
+	oscillator: {
+		type: "triangle"
+	},
+	envelope: {
+		attack: 0.005,
+		decay: 0.1,
+		sustain: 0.3,
+		release: 1
+	}
+}).toMaster()
+
 function take_picture(){
 	let canvas = document.getElementById('a-canvas')
 	let ratio = canvas.width/canvas.height
 	let video = document.querySelector('#camera-stream')
 	let height = video.videoWidth/ratio
 	let yOffset = (video.videoHeight - height)/2
-	let ctx = canvas.getContext('2d');
+	let ctx = canvas.getContext('2d')
 	ctx.drawImage(
 		video,
 		0, yOffset, video.videoWidth, height,
@@ -14,64 +30,155 @@ function take_picture(){
 	let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
 	// console.log("imageData:", imageData)
 	let data = imageData.data
+
 	// Arrange greyscale by rows and columns for sonification.
-	const nosRow = 300
-	const nosCol = 400
 	let aoa = []
 	let rowIncr = 0
 	let currCol = new Array(nosRow)
-	for (let i = 0; i < data.length; i+=4){
-		currCol[rowIncr] = (data[i] + data[i + 1] + data[i + 2])/3
-		rowIncr++
-		if (rowIncr % nosRow == 0){
-			aoa.push(currCol)
-			rowIncr = 0
-			currCol = []
+	for (let jdx = 0; jdx < nosCol; jdx++){
+		for (let idx = 0; idx < nosRow; idx++){
+			currCol[idx] = (
+				data[4*(jdx + nosCol*idx)] +
+				data[4*(jdx + nosCol*idx) + 1] +
+				data[4*(jdx + nosCol*idx) + 2]
+			)/3
 		}
+		aoa.push(currCol)
+		currCol = []
 	}
 	// console.log("aoa:", aoa)
-	// Put greyscale back on to canvas.
-	let data2 = []
-	aoa.map(function(col, idx){
-		col.map(function(v, jdx){
-			data2.push(v)
-			data2.push(v)
-			data2.push(v)
-			data2.push(255)
-		})
-	})
-	// console.log("data2:", data2)
+
+	// Put greyscale back into an array.
+	let data2 = new Array(4*nosRow*nosCol)
+	let kdx = 0
+	for (let idx = 0; idx < nosRow; idx++){
+		for (let jdx = 0; jdx < nosCol; jdx++){
+			data2[kdx] = aoa[jdx][idx]
+			data2[kdx + 1] = aoa[jdx][idx]
+			data2[kdx + 2] = aoa[jdx][idx]
+			data2[kdx + 3] = 255
+			kdx+=4
+		}
+	}
 	let data3 = Uint8ClampedArray.from(data2)
 	// console.log("data3:", data3)
+
 	// Put the altered image back on the canvas.
 	ctx.putImageData(new ImageData(data3, nosCol, nosRow), 0, 0)
 	return aoa
 }
 
 function sonify_picture(aoa){
-	const nosCol = aoa.length
-	const nosRow = aoa[0].length
-	let freq = []
-	let amp = []
-	aoa.map(function(col){
-		const ma = mu.max_argmax(col)
-		amp.push(ma[0])
-		freq.push(ma[1])
+	if (aoa == undefined){
+		return alert("Take a photo first!")
+	}
+	if (Tone.Transport.state == "started"){
+		return alert("Already playing!")
+	}
+	Tone.Transport.start()
+	let freqIdx = new Array(nosCol)
+	let amp = new Array(nosCol)
+	aoa.map(function(col, jdx){
+		const colMin10 = mu.sort_rows(
+			col.map(function(v){ return [v] })
+		)
+		freqIdx[jdx] = colMin10[1].slice(0, 10)
+		amp[jdx] = colMin10[0].slice(0, 10).map(function(v){ return v[0] })
 	})
-	console.log("freq:", freq)
+	console.log("freqIdx:", freqIdx)
 	console.log("amp:", amp)
+
+	// Reset the image in case they've already hit play once!
+	let canvas = document.getElementById('a-canvas')
+	let ctx = canvas.getContext('2d');
+	let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+	let kdx = 0
+	for (let idx = 0; idx < nosRow; idx++){
+		for (let jdx = 0; jdx < nosCol; jdx++){
+			imageData.data[kdx] = imgDat[jdx][idx]
+			imageData.data[kdx + 1] = imgDat[jdx][idx]
+			imageData.data[kdx + 2] = imgDat[jdx][idx]
+			imageData.data[kdx + 3] = 255
+			kdx+=4
+		}
+	}
+	console.log("imageData:", imageData)
+	ctx.putImageData(imageData, 0, 0)
+
+	let jdx = 0
+	Tone.Transport.scheduleRepeat(function(time){
+		if (jdx < nosCol){
+			// synth.voices.map(function(vc){
+			// 	vc.volume.value = 1 - amp[jdx][idx]/255
+			// })
+			synth.voices.map(function(vc, idx){
+				if (jdx == 0){
+					vc.triggerAttack(
+						nosCol - freqIdx[jdx][idx], time,
+					)
+
+				}
+				else if (jdx == nosCol){
+					vc.triggerRelease(
+						nosCol - freqIdx[jdx - 1][idx], time
+					)
+				}
+				else {
+					vc.setNote(
+						nosCol - freqIdx[jdx][idx]
+					)
+				}
+			})
+
+			Tone.Draw.schedule(function(aTime){
+				// console.log("Happening! jdx = " + jdx + ".")
+				freqIdx[jdx].map(function(idx){
+					imageData.data[4*(jdx + nosCol*idx) + 2] = 255
+				})
+				ctx.putImageData(imageData, 0, 0)
+			}, time)
+			jdx++
+		}
+	}, 0.05)
 }
-
-
-// Adapted from https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-// In this example we iterate over all pixels to change their values, then we
-// put the modified pixel array back to the canvas using putImageData(). The
-// invert function simply subtracts each color from the max value 255. The
-// grayscale function simply uses the average of red, green and blue.
 
 Tone.Transport.loop = true
 Tone.Transport.loopEnd = "2m"
 Tone.Transport.bpm.value = 130
+
+function snap(){
+	imgDat = take_picture()
+	console.log("imgDat:", imgDat)
+}
+
+function my_stop(){
+	synth.voices.map(function(vc){
+		vc.triggerRelease()
+	})
+	Tone.Transport.cancel()
+	Tone.Transport.scheduleOnce(function(time){
+		console.log("THIS IS HAPPENING!")
+		// let canvas = document.getElementById('a-canvas')
+		// let ctx = canvas.getContext('2d');
+		// let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+		// let kdx = 0
+		// for (let idx = 0; idx < nosRow; idx++){
+		// 	for (let jdx = 0; jdx < nosCol; jdx++){
+		// 		imageData.data[kdx] = imgDat[jdx][idx]
+		// 		imageData.data[kdx + 1] = imgDat[jdx][idx]
+		// 		imageData.data[kdx + 2] = imgDat[jdx][idx]
+		// 		imageData.data[kdx + 3] = 255
+		// 		kdx+=4
+		// 	}
+		// }
+		// console.log("imageData:", imageData)
+		// // Reset the image in case they've already hit play once!
+		// ctx.putImageData(imageData, 0, 0)
+		Tone.Transport.stop()
+	}, "+0.25")
+
+}
+
 
 // const audioPath = "https://tomcollinsresearch.net/mc/ex/src/instrument/"
 // let kick = new Tone.MembraneSynth().toMaster()
@@ -169,19 +276,13 @@ Tone.Transport.bpm.value = 130
 //   }, time)
 // }, "1:2:0")
 
-function my_start(){
-  Tone.Transport.start()
-	imgDat = take_picture()
-	// console.log("imgDat:", imgDat)
-}
-
-function toggle_sample(str){
-	if (transportIds[str] == null){
-		return Tone.Transport.schedule(function(time){
-    	p.get(str).start("+0.001", 0, 3.69230)
-    }, 0)
-  }
-  else {
-  	Tone.Transport.clear(transportIds[str])
-  }
-}
+// function toggle_sample(str){
+// 	if (transportIds[str] == null){
+// 		return Tone.Transport.schedule(function(time){
+//     	p.get(str).start("+0.001", 0, 3.69230)
+//     }, 0)
+//   }
+//   else {
+//   	Tone.Transport.clear(transportIds[str])
+//   }
+// }

@@ -41,10 +41,12 @@ let instrDef = {
     "tonejsDef": function(){
       return new Tone.Players({
         "200000": baseURL + "edm_drum_samples/" + "048_full_on.mp3",
-        "200001": baseURL + "edm_drum_samples/" + "049_kick_and_clap.mp3",
-        "200002": baseURL + "edm_drum_samples/" + "050_laid_back.mp3",
-        "200003": baseURL + "edm_drum_samples/" + "057_punchy.mp3",
-        "200004": baseURL + "edm_drum_samples/" + "055_cymbal_detail.mp3"
+        "200001": baseURL + "edm_drum_samples/" + "050_laid_back.mp3",
+        "200002": baseURL + "edm_drum_samples/" + "052_build_1.mp3",
+        "200003": baseURL + "edm_drum_samples/" + "054_clap_alt_crash",
+        "200004": baseURL + "edm_drum_samples/" + "055_cymbal_detail.mp3",
+        "200005": baseURL + "edm_drum_samples/" + "056_cowbell.mp3",
+        "200006": baseURL + "edm_drum_samples/" + "057_punchy.mp3"
       }, function(){
         console.log("drum loaded!")
         load_check()
