@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700|Cabin+Condensed:400,600");
+
+body {
+  background-color: #FFF;
+  margin: 0px;
+  font-family: Ubuntu, sans-serif;
+  color: #1e1e1e;
+  font-weight: normal;
+  padding-top: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cabin Condensed", sans-serif;
+}
+
+#container {
+  width: 640px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#interactive.viewport {
+  width: 640px;
+  height: 480px;
+}
+
+
+#interactive.viewport canvas, video {
+  float: left;
+  width: 640px;
+  height: 480px;
+}
+
+#interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
+  margin-left: -640px;
+}
+
+#result_strip {
+  margin: 10px 0;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  padding: 10px 0;
+}
+
+#result_strip > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#result_strip > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 160px;
+}
+
+#result_strip > ul > li .thumbnail {
+  padding: 5px;
+  margin: 4px;
+  border: 1px dashed #CCC;
+}
+
+#result_strip > ul > li .thumbnail img {
+  max-width: 140px;
+}
+
+#result_strip > ul > li .thumbnail .caption {
+  white-space: normal;
+}
+
+#result_strip > ul > li .thumbnail .caption h4 {
+  text-align: center;
+  word-wrap: break-word;
+  height: 40px;
+  margin: 0px;
+}
+
+#result_strip > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 603px) {
+
+  #container {
+    width: 300px;
+    margin: 10px auto;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #container form.voucher-form input.voucher-code {
+    width: 180px;
+  }
+}
+@media (max-width: 603px) {
+
+  .reader-config-group {
+    width: 100%;
+  }
+
+  .reader-config-group label > span {
+      width: 50%;
+  }
+
+  .reader-config-group label > select, .reader-config-group label > input {
+      max-width: calc(50% - 2px);
+  }
+
+  #interactive.viewport {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+
+  #interactive.viewport canvas, video {
+    margin-top: -50px;
+    width: 300px;
+    height: 400px;
+  }
+
+  #interactive.viewport canvas.drawingBuffer, video.drawingBuffer {
+    margin-left: -300px;
+  }
+
+
+  #result_strip {
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+
+  #result_strip ul.thumbnails > li {
+    width: 150px;
+  }
+
+  #result_strip ul.thumbnails > li .thumbnail .imgWrapper {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+  }
+
+  #result_strip ul.thumbnails > li .thumbnail .imgWrapper img {
+    margin-top: -25px;
+    width: 130px;
+    height: 180px;
+  }
+}
