@@ -3,7 +3,7 @@ Repo for various MSTRC Coding Collective hacks
 
 ## Examples on the p5.js site
 
-* "Towards Snake!". A first attempt at a "sketch" in p5.js. From Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
+* (Towards Snake!)[https://editor.p5js.org/tomthecollins/sketches/DOBzEdnCr]. A first attempt at a "sketch" in p5.js. From Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
 * "Getting closer to Snake!". Not much further than the sketch above, but rearrangement of code into a "Snake class", which will help going forward, and is our first encounter with something called object-oriented programming. Also from Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
 
 ## Examples on Glitch
