@@ -5,8 +5,10 @@ Repo for various MSTRC Coding Collective hacks
 
 * [Towards Snake!](https://editor.p5js.org/tomthecollins/sketches/DOBzEdnCr) A first attempt at a "sketch" in p5.js. From Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
 * [Getting closer to Snake!](https://editor.p5js.org/tomthecollins/sketches/M5fM2NGci) Not much further than the sketch above, but rearrangement of code into a "Snake class", which will help going forward, and is our first encounter with something called object-oriented programming. Also from Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
-* [Still a box, now chunked](https://editor.p5js.org/tomthecollins/sketches/9IXODrgER)
-* [Snake can eat apple and get longer](https://editor.p5js.org/tomthecollins/sketches/RRCmVgPgl)
+* [Still a box, now chunked](https://editor.p5js.org/tomthecollins/sketches/9IXODrgER). We didn't do this in the session, but if you want to actually finish an implementation of the game Snake! and are stuck, check it out.
+* [Snake can eat apple and get longer](https://editor.p5js.org/tomthecollins/sketches/RRCmVgPgl). We didn't do this in the session, but if you want to actually finish an implementation of the game Snake! and are stuck, check it out.
+
+The above examples are all based on watching this [video of Daniel Shiffman coding Snake](https://www.youtube.com/watch?v=AaGK-fj-BAM).
 
 ## Examples on Glitch
 [Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database.
