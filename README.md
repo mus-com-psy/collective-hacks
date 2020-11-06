@@ -18,6 +18,12 @@ The following examples from Coding Collective are on Glitch:
 * [collective-p5-template](https://glitch.com/~collective-p5-template), which shows some basic functionality possible with creative coding language [p5.js](https://p5js.org/reference/);
 * [collective-p5-tone-template](https://glitch.com/~collective-p5-tone-template), which shows how to add in [Tone.js](https://tonejs.github.io/) for powerful browser-based audio manipulation. (p5.js has some of its own audio capabilities, but Tom and many others in the web audio community would recommend Tone.js.
 
+## Examples of web-based step sequencers
+
+* [grid](https://tomcollinsresearch.net/mc/ex/grid/) is a step sequencer that I (Tom) made. If you do File -> Save Page As..., you should be able to obtain all the dependencies. The main action is in sequencer.js.
+* [NexusUI](https://nexus-js.github.io/ui/) has a step sequencer class, which makes it easier than with my example above to get your own grid showing up in the browser.
+* [Online Sequencer](https://onlinesequencer.net/) is both an online sequencer and active music-making community. Check it out!
+
 ## Examples in the source code of this repository...
 are several. Further explanations to be added soon!
 
