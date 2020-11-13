@@ -12,11 +12,11 @@ The above examples are all based on watching this [video of Daniel Shiffman codi
 
 ## Tone.js examples on the p5.js site
 
-Here are links to [Tone.js'](https://tonejs.github.io/) [examples](https://tonejs.github.io/examples/) and [documentation](https://tonejs.github.io/docs/) (terse).
-
 * [Tone.js hello world](https://editor.p5js.org/tomthecollins/sketches/bjjA5a8Cn). Shows how Tone.js handles the use of various sound sources, and enables use of a "transport".
 * [Tone.js Analyser](https://editor.p5js.org/tomthecollins/sketches/Gk7kFdV9o). Demonstrates use (visualisation) of microphone input. Here's a [slight variation](https://editor.p5js.org/tomthecollins/sketches/ghLYQ_mf7) that visualises a sound file instead.
 * [Tone.js GrainPlayer](https://editor.p5js.org/tomthecollins/sketches/f7ChBUfFI). Handy for dynamic time-stretch and pitch-shift.
+
+Here are links to [Tone.js'](https://tonejs.github.io/) [examples](https://tonejs.github.io/examples/) and [documentation](https://tonejs.github.io/docs/) (terse).
 
 ## p5.js and Tone.js examples on Glitch
 [Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database. It's the server-side functionality, which **enables building of systems that can support usage/collaboration of multiple users and data storage** that distinguishes it from the p5.js editor or JSFiddle.
