@@ -14,7 +14,7 @@ The above examples are all based on watching this [video of Daniel Shiffman codi
 
 * [Tone.js hello world](https://editor.p5js.org/tomthecollins/sketches/bjjA5a8Cn). Shows how Tone.js handles the use of various sound sources, and enables use of a "transport".
 * [Tone.js Analyser](https://editor.p5js.org/tomthecollins/sketches/Gk7kFdV9o). Demonstrates use (visualisation) of microphone input. Here's a [slight variation](https://editor.p5js.org/tomthecollins/sketches/ghLYQ_mf7) that visualises a sound file instead.
-* [Tone.js GrainPlayer](https://editor.p5js.org/tomthecollins/sketches/f7ChBUfFI). Handy for dynamic time-stretch and pitch-shift.
+* [Tone.js GrainPlayer](https://editor.p5js.org/tomthecollins/sketches/f7ChBUfFI). Handy for dynamic time-stretch and pitch-shift. [Tom Smith's cool variation](https://editor.p5js.org/tomthecollins/sketches/dPSP7vK3T) where the location of the meandering dot sets the time-stretch and pitch-shift parameter values.
 
 Here are links to [Tone.js'](https://tonejs.github.io/) [examples](https://tonejs.github.io/examples/) and [documentation](https://tonejs.github.io/docs/) (terse).
 
