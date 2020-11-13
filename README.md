@@ -1,7 +1,7 @@
 # collective-hacks
 Repo for various MSTRC Coding Collective hacks
 
-## Examples on the p5.js site
+## p5.js examples on the p5.js site
 
 * [Towards Snake!](https://editor.p5js.org/tomthecollins/sketches/DOBzEdnCr) A first attempt at a "sketch" in p5.js. From Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
 * [Getting closer to Snake!](https://editor.p5js.org/tomthecollins/sketches/M5fM2NGci) Not much further than the sketch above, but rearrangement of code into a "Snake class", which will help going forward, and is our first encounter with something called object-oriented programming. Also from Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js"
@@ -10,8 +10,14 @@ Repo for various MSTRC Coding Collective hacks
 
 The above examples are all based on watching this [video of Daniel Shiffman coding Snake](https://www.youtube.com/watch?v=AaGK-fj-BAM).
 
-## Examples on Glitch
-[Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database.
+## Tone.js examples on the p5.js site
+
+* [Tone.js hello world](https://editor.p5js.org/tomthecollins/sketches/bjjA5a8Cn). Shows how Tone.js handles the use of various sound sources, and enables use of a "transport".
+* [Tone.js Analyser](https://editor.p5js.org/tomthecollins/sketches/Gk7kFdV9o). Demonstrates use of microphone input.
+* [Tone.js GrainPlayer](https://editor.p5js.org/tomthecollins/sketches/f7ChBUfFI). Handy for dynamic time-stretch and pitch-shift.
+
+## p5.js and Tone.js examples on Glitch
+[Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database. It's the server-side functionality, which **enables building of systems that can support usage/collaboration of multiple users and data storage** that distinguishes it from the p5.js editor or JSFiddle.
 
 The following examples from Coding Collective are on Glitch:
 
