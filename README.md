@@ -21,7 +21,7 @@ Here are links to [Tone.js'](https://tonejs.github.io/) [examples](https://tonej
 ## Examples on Glitch
 [Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database. It's the server-side functionality, **enabling building of systems that can support usage/collaboration of multiple users and data storage**, which distinguishes it from the p5.js editor or JSFiddle.
 
-The following examples from Coding Collective are on Glitch:
+The following examples from [Coding Collective are on Glitch](https://glitch.com/@tomthecollins/coding-collective):
 
 * [collective-p5-template](https://glitch.com/~collective-p5-template), which shows some basic functionality possible with creative coding language [p5.js](https://p5js.org/reference/);
 * [collective-p5-tone-template](https://glitch.com/~collective-p5-tone-template), which shows how to add in [Tone.js](https://tonejs.github.io/) for powerful browser-based audio manipulation. (p5.js has some of its own audio capabilities, but Tom and many others in the web audio community would recommend Tone.js.
