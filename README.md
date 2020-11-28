@@ -26,7 +26,7 @@ The following examples from [Coding Collective are on Glitch](https://glitch.com
 * [collective-p5-template](https://glitch.com/~collective-p5-template), which shows some basic functionality possible with creative coding language [p5.js](https://p5js.org/reference/);
 * [collective-p5-tone-template](https://glitch.com/~collective-p5-tone-template), which shows how to add in [Tone.js](https://tonejs.github.io/) for powerful browser-based audio manipulation. (p5.js has some of its own audio capabilities, but Tom and many others in the web audio community would recommend Tone.js.)
 * [collective-drums](https://glitch.com/~collective-drums), which shows how to combine [NexusUI](https://nexus-js.github.io/ui/) sequencer and [Socket.IO](https://socket.io/);
-* [collective-scrabble](https://glitch.com/~collective-scrabble), which isn't music-related, but combines [p5.js](https://p5js.org] and [Socket.IO](https://socket.io/) to interesting effect!
+* [collective-scrabble](https://glitch.com/~collective-scrabble), which isn't music-related, but combines [p5.js](https://p5js.org) and [Socket.IO](https://socket.io/) to interesting effect!
 
 ## Examples of web-based step sequencers
 
