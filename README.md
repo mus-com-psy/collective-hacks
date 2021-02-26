@@ -18,6 +18,10 @@ The above examples are all based on watching this [video of Daniel Shiffman codi
 
 Here are links to [Tone.js'](https://tonejs.github.io/) [examples](https://tonejs.github.io/examples/) and [documentation](https://tonejs.github.io/docs/) (terse).
 
+## NexusUI example on the p5.js site
+
+* [NexusUI hello world](https://editor.p5js.org/tomthecollins/sketches/ZTAW0wWWx). Shows how stick a NexusUI dial on a webpage and have it control the volume level of a Tone.js Player. In case it's helpful to see the evolution of this sketch, here's a [slightly earlier version](https://editor.p5js.org/tomthecollins/sketches/gBgu7SCpn) without any connection to Tone.js/sound.
+
 ## Examples on Glitch
 [Glitch](https://glitch.com/) is wonderful because it's free and gets you set up immediately with a basic webpage, or an app with a Node.js server, or an app with a Node.js server and SQLite database. It's the server-side functionality, **enabling building of systems that can support usage/collaboration of multiple users and data storage**, which distinguishes it from the p5.js editor or JSFiddle.
 
