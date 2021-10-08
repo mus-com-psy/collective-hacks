@@ -1,6 +1,13 @@
 # collective-hacks
 Repo for various MSTRC Coding Collective hacks
 
+
+## Getting started academic year 2021/22
+
+* [Show an image that moves with click](https://editor.p5js.org/tomthecollins/sketches/_vkbzxTtS)
+* [Show an image that moves with drag](https://editor.p5js.org/tomthecollins/sketches/z38ib_8qq)
+* [Show an image that moves, add some sound](https://editor.p5js.org/tomthecollins/sketches/D8t8f99uf)
+
 ## p5.js examples on the p5.js site
 
 * [Towards Snake!](https://editor.p5js.org/tomthecollins/sketches/DOBzEdnCr) A first attempt at a "sketch" in p5.js. From Coding collective on 9th October, 2020: "Coding session 1: Introduction to JavaScript and p5.js". Here is a [recording](https://drive.google.com/file/d/1oPF4C98j8-oMX6EH-nPd2xRLzY0D2fdq/view?usp=sharing) of the session (accessible to Univ York accounts only).
