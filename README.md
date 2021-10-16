@@ -4,9 +4,11 @@ Repo for various MSTRC Coding Collective hacks
 
 ## Getting started academic year 2021/22
 
-* [Show an image that moves with click](https://editor.p5js.org/tomthecollins/sketches/_vkbzxTtS)
-* [Show an image that moves with drag](https://editor.p5js.org/tomthecollins/sketches/z38ib_8qq)
-* [Show an image that moves, add some sound](https://editor.p5js.org/tomthecollins/sketches/D8t8f99uf)
+* [Image that moves with click](https://editor.p5js.org/tomthecollins/sketches/_vkbzxTtS)
+* [Image that moves with drag](https://editor.p5js.org/tomthecollins/sketches/z38ib_8qq)
+* [Image and a sound](https://editor.p5js.org/tomthecollins/sketches/D8t8f99uf)
+* [Image changes synth frequency](https://editor.p5js.org/tomthecollins/sketches/otOSgNhIH)
+* [Chebyshev effect on mic](https://editor.p5js.org/tomthecollins/sketches/0L7JkmD_k)
 
 ## p5.js examples on the p5.js site
 
