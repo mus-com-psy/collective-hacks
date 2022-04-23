@@ -47,6 +47,11 @@ The following examples from [Coding Collective are on Glitch](https://glitch.com
 * [NexusUI](https://nexus-js.github.io/ui/) has a step sequencer class, which makes it easier than with my example above to get your own grid showing up in the browser.
 * [Online Sequencer](https://onlinesequencer.net/) is both an online sequencer and active music-making community. Check it out!
 
+## Introduction to sonification
+
+* [Sonification of hydrogen atom energies](https://editor.p5js.org/tomthecollins/sketches/LJG_ObSaI) on a mathematical operations by Dan Watts
+* [Sonification of carbon-12 atom energies](https://editor.p5js.org/tomthecollins/sketches/LJG_ObSaI) based on [this diagram](https://nucldata.tunl.duke.edu/nucldata/figures/12figs/12_03_2017.png)
+
 ## Examples in the source code of this repository...
 are several. Further explanations to be added soon!
 
