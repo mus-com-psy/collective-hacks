@@ -49,8 +49,9 @@ The following examples from [Coding Collective are on Glitch](https://glitch.com
 
 ## Introduction to sonification
 
-* [Sonification of hydrogen atom energies](https://editor.p5js.org/tomthecollins/sketches/LJG_ObSaI) on a mathematical operations by Dan Watts
-* [Sonification of carbon-12 atom energies](https://editor.p5js.org/tomthecollins/sketches/LJG_ObSaI) based on [this diagram](https://nucldata.tunl.duke.edu/nucldata/figures/12figs/12_03_2017.png)
+* [Sonification of hydrogen atom energies](https://editor.p5js.org/tomthecollins/sketches/LJG_ObSaI) based on a mathematical operations by Dan Watts
+* [Sonification of carbon-12 atom energies](https://editor.p5js.org/tomthecollins/sketches/0WW2GRskP) based on [this diagram](https://nucldata.tunl.duke.edu/nucldata/figures/12figs/12_03_2017.png). [A slightly superior example](https://editor.p5js.org/tomthecollins/sketches/sU1_GfJ-0) (better instructions regarding user interaction).
+* [https://editor.p5js.org/tomthecollins/sketches/l7qowixgH](Proton/neutron)
 
 ## Examples in the source code of this repository...
 are several. Further explanations to be added soon!
